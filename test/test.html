@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>mintro测试用例</title>
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="../index.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/ui-default.css"/>
+<style type="text/css">
+    ul { margin-top: 100px; }
+    li { float: left; margin-right: 300px; margin-bottom: 200px; width: 10px; height: 10px; background-color: #f00; }
+
+    .mintro_steps0 { top: 50%; left: 50%; margin-top: -216px; margin-left: -251px; }
+    .mintro_steps0 .mintro_close { right: 0; top: 60px; }
+    .mintro_steps0 .mintro_next { left: 216px; top: 255px; }
+    .mintro_steps0 .first_step0 { display: block; width: 503px; height: 432px; background: url("../images/new_guide.png") no-repeat 0 0 ; }
+
+    .mintro_steps1 .mintro_next { left: 274px; top: 97px; }
+    .mintro_steps1 .first_step1 { display: block; width: 543px; height: 155px; background: url("../images/new_guide.png") no-repeat 0 -531px ; }
+
+    .mintro_steps2 .mintro_close { right: 24px; top: 0; }
+    .mintro_steps2 .mintro_next { left: 280px; top: 97px; }
+    .mintro_steps2 .first_step2 { display: block; width: 574px; height: 155px; background: url("../images/new_guide.png") no-repeat 0 -786px ; }
+
+    .mintro_steps3 .mintro_next { left: 280px; top: 97px; }
+    .mintro_steps3 .first_step3 { display: block; width: 550px; height: 155px; background: url("../images/new_guide.png") no-repeat -603px 0 ; }
+
+    .mintro_steps4 .mintro_close { right: 9px; }
+    .mintro_steps4 .mintro_next { left: 280px; top: 96px; }
+    .mintro_steps4 .first_step4 { display: block; width: 559px; height: 156px; background: url("../images/new_guide.png") no-repeat -603px -255px ; }
+
+    .mintro_steps5 .mintro_close { top: 192px; right: 0 ; }
+    .mintro_steps5 .mintro_next { left: 0; top: 329px; }
+    .mintro_steps5 .first_step5 { display: block; width: 360px; height: 387px; background: url("../images/new_guide.png") no-repeat -642px -510px ; }
+</style>
+</head>
+<body>
+<ul>
+    <li class="intro1"></li>
+    <li class="intro2"></li>
+    <li class="intro3"></li>
+    <li class="intro4"></li>
+    <li class="intro5"></li>
+</ul>
+<script type="text/javascript">
+$( function(){
+    mintro( {
+        firstStep: 0 ,
+        stepClass: 'mintro_steps' ,
+        steps: [
+            { intro: '<div class="first_step0"></div>' } ,
+            { element: '.intro1' , intro: '<div class="first_step1"></div>' , diff: { top: -30 , left: 24 } } ,
+            { element: '.intro2' , intro: '<div class="first_step2"></div>' , diff: { top: -50 , left: 24 } } ,
+            { element: '.intro3' , intro: '<div class="first_step3"></div>' , diff: { top: -44 , left: 24 } } ,
+            { element: '.intro4' , intro: '<div class="first_step4"></div>' , diff: { top: -50 , left: 24 } } ,
+            { element: '.intro5' , intro: '<div class="first_step5"></div>' , diff: { top: -8 , left: -50 } }
+        ] ,
+        destroy: function(){
+            // 关闭引导的回调，一般都是在此处设置cookie纪录本次已访问
+        }
+    } ) ;
+} ) ;
+</script>
+</body>
+</html>

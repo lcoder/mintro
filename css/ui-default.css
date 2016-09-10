@@ -1,0 +1,6 @@
+@charset "UTF-8";
+/* 新人引导 */
+#mintro_mask { position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 790; background-color: rgb(0,0,0)\9; filter: alpha(opacity=70)\9; background-color: rgba(0,0,0,0.7); }
+.mintro_steps { position: fixed; top: 0; left: 0; z-index: 799; display: none; }
+.mintro_steps .mintro_close { display: block; position: absolute; right: 0; top: 0; width: 32px; height: 32px; }
+.mintro_steps .mintro_next { display: block; position: absolute; left: 0; top: 60px; width: 138px; height: 58px; }
